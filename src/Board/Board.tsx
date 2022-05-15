@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Button, Row, Col } from 'react-bootstrap';
 import Square from '../Square';
 
@@ -11,13 +11,17 @@ const Board = () => {
     const [winner,setWinner] = useState('Tie')
     const [count,setCount] = useState(0)
 
+    useEffect(()=>{
+        if (isWinner()) {
+            return;
+          }
+    })
 
     const handleClick = (i: number) => {
         const grid = squares.slice()
-    
         if (isWinner() || squares[i]) {
             return;
-          }
+        }
         if(count==9){
             return
         }
@@ -26,9 +30,7 @@ const Board = () => {
             setSquares(grid);
             setXisNext(!xNextPlayer);
             setCount(count+1)
-            if(isWinner()){
-                return
-            }
+            
         }
         
         
