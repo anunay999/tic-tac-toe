@@ -1,6 +1,8 @@
 # Getting Started 
 
 Here is the snippet of tic-tac-toe
+<img width="752" alt="Screenshot 2022-05-15 at 12 01 14 PM" src="https://user-images.githubusercontent.com/16853513/168460405-036f9323-05c8-4675-b9cc-cdbdf4734313.png">
+
 
 
 ## Available Scripts
